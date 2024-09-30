@@ -4,16 +4,16 @@ import { validateUser } from '../middleware/userMiddleware.js';
 
 const router = express.Router();
 
-// Creare un nuovo utente
+// nuovo utente
 router.post('/users', validateUser, createUser);
 
 // Ottenere un singolo utente 
 router.get('/users/:id', getUser);
 
-// Aggiornare i dati di un utente
+// Aggiornare utente
 router.put('/users/:id', validateUser, UpdateUser);
 
-// Eliminare un utente 
+// Eliminareuten te 
 router.delete('/users/:id', deleteUser);
 
 export default router;
