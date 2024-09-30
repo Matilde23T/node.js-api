@@ -1,0 +1,19 @@
+import express from 'express';
+import { createUser, getUser, UpdateUser, deleteUser } from '../controller/userController.js';
+import { validateUser } from '../middleware/userMiddleware.js'; 
+
+const router = express.Router();
+
+// Creare un nuovo utente
+router.post('/users', validateUser, createUser);
+
+// Ottenere un singolo utente 
+router.get('/users/:id', getUser);
+
+// Aggiornare i dati di un utente
+router.put('/users/:id', validateUser, UpdateUser);
+
+// Eliminare un utente 
+router.delete('/users/:id', deleteUser);
+
+export default router;
