@@ -13,7 +13,7 @@ router.get('/users/:id', getUser);
 // Aggiornare utente
 router.put('/users/:id', validateUser, UpdateUser);
 
-// Eliminareuten te 
+// Eliminare utente 
 router.delete('/users/:id', deleteUser);
 
 export default router;
